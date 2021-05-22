@@ -1,4 +1,5 @@
 
+//return the frequency of a letter in a string 
 function frequencyof(l,str){
   let sum =0;
   for(let i=0;i<str.length;i+=1){
@@ -8,6 +9,10 @@ function frequencyof(l,str){
   }
   return sum;
 }
+
+
+//the main class representing a node in the binary tree
+//each node has a left child and a right child and points to a neighbour node
 
 class node{
 
@@ -20,6 +25,7 @@ this.next = null;
 this.parented = false;
     }
 
+ //add a node as a neighbour to self
 add(next_node){
   if (this.next == null){
   this.next = next_node;
@@ -28,7 +34,7 @@ add(next_node){
 }
 }
 
-
+//check if a letter is in any of the neighbourhood nodes
 check(k){
   if((this.next == null) && (this.letter!=k)){
     return 0;
@@ -38,7 +44,8 @@ check(k){
     return this.next.check(k);
   }
 }
-
+  
+// return the node with the smallest frequency
 smallest(small){
         if (small==null){
             if (!this.parented){
@@ -60,7 +67,7 @@ smallest(small){
             }
 }
 
-
+//make the neighbour hood
   start(str2){
         for(let i=0;i<str2.length;i+=1){
           if (!this.check(str2[i])){
@@ -69,7 +76,8 @@ smallest(small){
           }
         }
      }
-
+  
+//form the binary tree and return its root
  binarytree(){
         let l=this.smallest(null);
         let r=this.smallest(null);
@@ -84,9 +92,8 @@ smallest(small){
         l.parented=false;
         return l;
 }
-
-
 }
+
 
   let element = $('#container-01');
   let config = { backgroundColor: 'white', disableFog: true };
