@@ -96,18 +96,18 @@ smallest(small){
 
 
   let element = $('#container-01');
+
+//initiate 3dmol viewr 
   let config = { backgroundColor: 'white', disableFog: true };
   let viewer = $3Dmol.createViewer( element, config );
   viewer.translate(0,100);
 
 
 var str = "huffmmmannn";
-//let str="latifa";
 let m =new node(frequencyof(str[0],str),str[0]);
 m.start(str);
 let root = m.binarytree();
 
-//viewer.setViewStyle({style:"outline"});
 
 
 function tree(n,x_,y_,r){
@@ -131,13 +131,12 @@ viewer.addLabel("huffman binary tree",{position:{x:0,y:0,z:0},useScreen:true,bac
 viewer.render();
 
 function again(){
+//get the string from user input
 var str = document.getElementById("message").value;
-//let str="latifa";
 let m =new node(frequencyof(str[0],str),str[0]);
 m.start(str);
 let root = m.binarytree();
 
-//viewer.setViewStyle({style:"outline"});
 
 
 function tree(n,x_,y_,r){
@@ -153,8 +152,6 @@ function tree(n,x_,y_,r){
     fontSize:15});
   }
 }
-
-
 tree(root,0,0,20);
 viewer.spin("y",0.3);
 viewer.addLabel("huffman binary tree",{position:{x:0,y:0,z:0},useScreen:true,backgroundColor:0xe8710a,backgroundOpacity: 0.8,fontColor:"black"});
