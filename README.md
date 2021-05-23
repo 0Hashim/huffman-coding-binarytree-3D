@@ -7,3 +7,4 @@ An interactive 3D representation of Huffman coding binary tree
 
 ![huffman tree](https://user-images.githubusercontent.com/84399880/119230055-862f8a00-bb12-11eb-9a83-56b480f2e395.png)
 
+this is made for educational purposes.
